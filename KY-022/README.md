@@ -1,4 +1,4 @@
-#IR RECEIVER  KY-022
+# IR RECEIVER  KY-022
 
 Código:
 
