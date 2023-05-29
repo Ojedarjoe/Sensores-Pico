@@ -7,17 +7,17 @@ Código:
 #Beny Samuel Pantoja Reyes 19211703
 # Button
 
-from machine import Pin
-from time import sleep
+import machine
 
-push_button = Pin(14, Pin.IN)  # Pin 14 pal button
+button_pin = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
+
+def button_pressed(pin):
+    print("Botón presionado")
+
+button_pin.irq(trigger=machine.Pin.IRQ_FALLING, handler=button_pressed)
 
 while True:
-  logic_state = push_button.value()
-  if logic_state == True:
-      print("Presionado")
-  else:
-      print("No Presionado")
+    pass
 ```
 
 # Foto
